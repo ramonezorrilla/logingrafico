@@ -28,26 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             lblTitulo = new Label();
             btnIngresar = new Button();
             txtUsuario = new TextBox();
             txtpassword = new TextBox();
             lblUsuario = new Label();
             lblPassword = new Label();
+            pictureBox1 = new PictureBox();
+            btncancelar = new Button();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // lblTitulo
             // 
             lblTitulo.AutoSize = true;
-            lblTitulo.Location = new Point(318, 51);
+            lblTitulo.Font = new Font("Segoe UI Semibold", 21.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            lblTitulo.Location = new Point(282, 48);
             lblTitulo.Name = "lblTitulo";
-            lblTitulo.Size = new Size(126, 15);
+            lblTitulo.Size = new Size(308, 40);
             lblTitulo.TabIndex = 0;
             lblTitulo.Text = "CONTROL DE ACCESO";
             // 
             // btnIngresar
             // 
-            btnIngresar.Location = new Point(357, 296);
+            btnIngresar.Location = new Point(326, 269);
             btnIngresar.Name = "btnIngresar";
             btnIngresar.Size = new Size(75, 23);
             btnIngresar.TabIndex = 1;
@@ -57,17 +62,17 @@
             // 
             // txtUsuario
             // 
-            txtUsuario.Location = new Point(401, 134);
+            txtUsuario.Location = new Point(373, 134);
             txtUsuario.Name = "txtUsuario";
-            txtUsuario.Size = new Size(100, 23);
+            txtUsuario.Size = new Size(128, 23);
             txtUsuario.TabIndex = 2;
             // 
             // txtpassword
             // 
-            txtpassword.Location = new Point(401, 190);
+            txtpassword.Location = new Point(373, 190);
             txtpassword.Name = "txtpassword";
             txtpassword.PasswordChar = '*';
-            txtpassword.Size = new Size(100, 23);
+            txtpassword.Size = new Size(128, 23);
             txtpassword.TabIndex = 3;
             // 
             // lblUsuario
@@ -88,11 +93,34 @@
             lblPassword.TabIndex = 5;
             lblPassword.Text = "PASSWORD";
             // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(33, 34);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(243, 262);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 6;
+            pictureBox1.TabStop = false;
+            // 
+            // btncancelar
+            // 
+            btncancelar.Location = new Point(426, 269);
+            btncancelar.Name = "btncancelar";
+            btncancelar.Size = new Size(75, 23);
+            btncancelar.TabIndex = 7;
+            btncancelar.Text = "CANCELAR";
+            btncancelar.UseVisualStyleBackColor = true;
+            btncancelar.Click += btncancelar_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            BackColor = Color.PaleTurquoise;
+            ClientSize = new Size(596, 304);
+            Controls.Add(btncancelar);
+            Controls.Add(pictureBox1);
             Controls.Add(lblPassword);
             Controls.Add(lblUsuario);
             Controls.Add(txtpassword);
@@ -101,6 +129,7 @@
             Controls.Add(lblTitulo);
             Name = "Form1";
             Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -113,5 +142,7 @@
         private TextBox txtpassword;
         private Label lblUsuario;
         private Label lblPassword;
+        private PictureBox pictureBox1;
+        private Button btncancelar;
     }
 }
